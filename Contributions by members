@@ -44,3 +44,37 @@ plt.hist(df['Fish'])
 
 
 
+#the codings done by nickson sangroula is mentioned below:
+
+# Initialize the lists for X and Y
+data = pd.read_csv('fairfield.csv',encoding='latin-1')
+  
+df = pd.DataFrame(data)
+  
+X = list(df.iloc[:, 0])
+Y = list(df.iloc[:, 2])
+  
+# Plot the data using bar() method
+plt.bar(X, Y, color='g')
+plt.title("Mercury level in reservoir")
+plt.xlabel("Reservoir")
+plt.ylabel("Mercury")
+  
+# Show the plot
+plt.show()
+
+import seaborn as sns
+
+sns.heatmap(df.corr())
+
+
+#Datatypes
+
+df.dtypes
+
+df[df['Mercury']==0.025].head()
+  
+
+
+
+
