@@ -1,0 +1,76 @@
+# We have broken down our python codes and made a contributions panel down below. the contributions by both of us is mentioned below 
+with our names and the code below our names.(note: we have also uploaded our full code and the python file along side this breakdown)
+
+#Coading done by Prashanna is below:
+
+import pandas as pd
+acs_part1 = pd.read_csv('fairfield.csv',encoding='latin-1')
+acs_part1
+
+acs_part2 = pd.read_csv('fairfield_loc.csv',encoding='latin-1')
+acs_part2
+
+pd.merge(
+    acs_part1, acs_part2,
+    left_index=True, right_index=True,
+)
+
+
+
+import pandas as pd
+
+df=pd.read_csv('Fairfield.csv',encoding='latin-1')
+
+
+#FINDING MAX AND MIN
+p=df['Mercury'].max()
+q=df['Mercury'].min()
+print(p)
+print(q)
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('fairfield.csv',encoding='latin-1', usecols=['Mercury','Fish','Elevation'])
+print(df.describe())
+plt.hist(df['Mercury'])
+
+
+
+df = pd.read_csv('fairfield.csv',encoding='latin-1', usecols=['Fish'])
+print(df.describe())
+plt.hist(df['Fish'])
+
+
+
+#the coadings done by nickson sangroula is mentioned below
+
+# Initialize the lists for X and Y
+data = pd.read_csv('fairfield.csv',encoding='latin-1')
+  
+df = pd.DataFrame(data)
+  
+X = list(df.iloc[:, 0])
+Y = list(df.iloc[:, 2])
+  
+# Plot the data using bar() method
+plt.bar(X, Y, color='g')
+plt.title("Mercury level in reservoir")
+plt.xlabel("Reservoir")
+plt.ylabel("Mercury")
+  
+# Show the plot
+plt.show()
+
+import seaborn as sns
+
+sns.heatmap(df.corr())
+
+
+#Datatypes
+
+df.dtypes
+
+df[df['Mercury']==0.025].head()
+  
+  
